@@ -1,0 +1,3 @@
+azure:
+  key_vault_name: "AZURE_KEY_VAULT_NAME"
+  secret_name: "AZURE_SECRET_NAME"
