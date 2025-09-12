@@ -21,8 +21,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from azure.identity import DefaultAzureCredential
 from azure.keyvault.secrets import SecretClient
 
-from conversation.conversation_engine import ConversationEngine
-from yaml_files.yaml_loading import (
+from conversation_engine.conversation_engine import ConversationEngine
+from helper_functionality.yaml_loading import (
     load_system_prompt, 
     load_chat_server_config,
     load_model_config,

@@ -24,8 +24,7 @@ Author: Andreas Rasmusson
 from transformers import AutoTokenizer, AutoModelForCausalLM, TextIteratorStreamer
 import torch
 import threading
-from helper_functionality.code_fences import ensure_fenced_code
-from conversation.inputs import *
+from conversation_engine.inputs import *
 from typing import List, Tuple, Optional
 from collections.abc import Generator
 
@@ -321,9 +320,9 @@ def parse_review_sections(reply: str) -> tuple[str, str, str]:
     else:
         comments = "None"
     return (
-        ensure_fenced_code(suggestions)[0],
-        ensure_fenced_code(revised_answer)[0],
-        ensure_fenced_code(comments)[0],
+        suggestions,
+        revised_answer,
+        comments,
     )
 
 def get_revised_reply(

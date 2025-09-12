@@ -25,8 +25,8 @@ Typical usage example:
 Author: Andreas Rasmusson
 """
 
-from helper_functionality.code_fences import ensure_fenced_code
-from conversation.outputs import *
+
+from conversation_engine.outputs import *
 
 class ConversationEngine:
     """
