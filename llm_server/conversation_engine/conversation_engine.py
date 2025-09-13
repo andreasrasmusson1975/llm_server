@@ -26,7 +26,7 @@ Author: Andreas Rasmusson
 """
 
 
-from conversation_engine.outputs import *
+from llm_server.conversation_engine.outputs import *
 
 class ConversationEngine:
     """
