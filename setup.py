@@ -14,6 +14,7 @@ setup(
     "azure-identity>=1.15.0",
     "azure-keyvault-secrets>=4.8.0",
     "pyyaml>=6.0",
+    ""bitsandbytes>=0.43.2"
 ]
 ,
     entry_points={
