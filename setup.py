@@ -18,7 +18,7 @@ setup(
 ,
     entry_points={
         "console_scripts": [
-            "start_llm_server = llm_server.server:main",
+            "start_llm_server = api.server:main",
         ]
     },
     include_package_data=True,
