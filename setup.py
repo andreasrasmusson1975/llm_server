@@ -9,7 +9,6 @@ setup(
     install_requires=[
         "fastapi>=0.111.0",
         "uvicorn>=0.30.0",
-        "torch>=2.3.0",
         "transformers>=4.56.0",
         "azure-identity>=1.15.0",
         "azure-keyvault-secrets>=4.8.0",
