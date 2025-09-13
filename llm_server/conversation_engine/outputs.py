@@ -24,7 +24,7 @@ Author: Andreas Rasmusson
 from transformers import AutoTokenizer, AutoModelForCausalLM, TextIteratorStreamer
 import torch
 import threading
-from conversation_engine.inputs import *
+from llm_server.conversation_engine.inputs import *
 from typing import List, Tuple, Optional
 from collections.abc import Generator
 
