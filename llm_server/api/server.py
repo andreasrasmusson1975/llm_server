@@ -21,14 +21,14 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from azure.identity import DefaultAzureCredential
 from azure.keyvault.secrets import SecretClient
 
-from conversation_engine.conversation_engine import ConversationEngine
-from helper_functionality.yaml_loading import (
+from llm_server.conversation_engine.conversation_engine import ConversationEngine
+from llm_server.helper_functionality.yaml_loading import (
     load_system_prompt, 
     load_chat_server_config,
     load_model_config,
     load_azure_config
 )
-from helper_functionality.model_loading import initialize
+from llm_server.helper_functionality.model_loading import initialize
 import uvicorn
 
 # ----------------------------
