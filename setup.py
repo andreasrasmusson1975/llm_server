@@ -139,7 +139,7 @@ setup(
         "tqdm==4.67.1",
         "traitlets==5.14.3",
         "transformers==4.56.1",
-        "triton==2.3.1",
+        "triton",
         "typer==0.17.4",
         "typing_extensions==4.12.2",
         "tzdata==2025.2",
