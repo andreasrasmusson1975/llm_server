@@ -41,7 +41,7 @@ setup(
         "fastapi==0.111.0",
         "fastapi-cli==0.0.11",
         "filelock==3.13.1",
-        "flash_attn==2.8.3",
+        "flash_attn",
         "frozenlist==1.7.0",
         "fsspec==2024.6.1",
         "gitdb==4.0.12",
