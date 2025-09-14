@@ -1,6 +1,6 @@
 model:
   type: "llm"
-  id: "meta-llama/Meta-Llama-3-8B-Instruct"
+  id: "mistralai/Mistral-Small-3.2-24B-Instruct-2506"
   device: "cuda:0"
   parameters:
     max_new_tokens: 2048
