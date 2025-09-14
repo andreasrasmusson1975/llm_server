@@ -112,5 +112,8 @@ def build_review_message(user_message: str, draft_answer: str) -> str:
     ### Comments
     Comments from you on the changes.
 
-    Do NOT add anything else. Your answer MUST consist of these three headings and their content below them.
+    Your answer MUST consist of these three headings and their content below them.
+    *** Very important ***
+    The content under the heading Revised Answer MUST only contain the contents of the revised answer so, that I
+    can copy-paste it.
     """
