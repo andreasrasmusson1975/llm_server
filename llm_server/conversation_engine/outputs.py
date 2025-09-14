@@ -549,7 +549,7 @@ def stream_and_improve_reply(
         role = "reviser", 
         conversation_history=conversation_history
     )
-    yield("🔄️ Running second improvement pass...")
+    yield("🔄️ Running second improvement pass...\n\n")
     reply = yield from stream_generate(inputs,tok,model)
     suggestions2, revised2, comments2 = parse_review_sections(reply)
 
