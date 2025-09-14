@@ -521,7 +521,7 @@ def stream_and_improve_reply(
         - The final return value (full text) can be accessed via generator's `return` (Python 3.3+).
         - For blocking, non-streaming output, use `get_and_improve_reply` instead.
     """
-    yield("🤔 Generating draft answer...\n\n")
+    yield("🤔 Generating draft answer...")
     draft = get_reply(
         tok, 
         model, 
@@ -530,7 +530,7 @@ def stream_and_improve_reply(
         role = "assistant", 
         conversation_history=conversation_history
     )
-    yield("🔄️ Running first improvement pass\n\n")
+    yield("🔄️ Running first improvement pass...")
     suggestions1, revised1, comments1 = get_revised_reply(
         user_message, 
         draft, 
@@ -549,7 +549,7 @@ def stream_and_improve_reply(
         role = "reviser", 
         conversation_history=conversation_history
     )
-    yield("🔄️ Running second improvement pass\n\n")
+    yield("🔄️ Running second improvement pass...")
     reply = yield from stream_generate(inputs,tok,model)
     suggestions2, revised2, comments2 = parse_review_sections(reply)
 
