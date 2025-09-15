@@ -11,7 +11,7 @@ echo "📦 Upgrading pip in venv..."
 "$VENV_DIR/bin/python" -m pip install --upgrade pip
 
 # echo "📦 Installing llm_server (no deps) into venv..."
-# "$VENV_DIR/bin/python" -m pip install . --no-deps
+"$VENV_DIR/bin/python" -m pip install . --no-deps
 
 echo "📦 Installing core dependencies into venv..."
 "$VENV_DIR/bin/python" -m pip install "numpy<2"

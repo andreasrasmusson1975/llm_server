@@ -114,6 +114,7 @@ def build_review_message(user_message: str, draft_answer: str) -> str:
 
     Your answer MUST consist of these three headings and their content below them.
     *** Very important ***
-    The content under the heading Revised Answer MUST only contain the contents of the revised answer so, that I
-    can copy-paste it.
+    1. The content under the heading Revised Answer MUST only contain the contents of the revised answer so, that I
+       can copy-paste it.
+    2. ALWAYS give detailed explanations after code snippets
     """
