@@ -16,7 +16,7 @@ Author: Andreas Rasmusson
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 import torch
 from typing import Tuple
-from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
+#from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 from transformers import Mistral3ForConditionalGeneration
 
 def initialize(
