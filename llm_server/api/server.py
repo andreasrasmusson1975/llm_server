@@ -125,6 +125,10 @@ async def chat_stream(request: Request, auth=Depends(check_api_key)):
     def generate():
         for chunk in engine.stream_reply(user_message):
             yield chunk
+        result = engine.last_result
+        final_reply = result.get("revision2") or result.get("reply")
+        if final_reply:
+            yield final_reply
         yield "[[END]]"
 
     return StreamingResponse(generate(), media_type="text/plain")
