@@ -71,7 +71,7 @@ def generate_reply(
         # Perform text generation with specified parameters
         out = model.generate(
             **inputs,
-            max_new_tokens=2048,
+            max_new_tokens=4096,
             do_sample=True,
             temperature=0.7,
             top_p=0.9,
@@ -92,7 +92,7 @@ def stream_generate(
     inputs: dict,
     tok: AutoTokenizer,
     model: AutoModelForCausalLM,
-    max_new_tokens: int = 2048
+    max_new_tokens: int = 4096
 ) -> Generator[str | None, None, str]:
     """
     Generate text in a streaming fashion, yielding partial output chunks as they are produced by the model.
