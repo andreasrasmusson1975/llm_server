@@ -85,36 +85,31 @@ def build_review_message(user_message: str, draft_answer: str) -> str:
     return f"""
     I received the following message/question:
     {user_message}
-
+    
     I thought about giving the following answer:
-
     {draft_answer}
-
-    But I'm not sure if my answer fully addresses the question or if there are better ways to respond.
-    Could you please help me review my answer and suggest improvements? I don't want the answer to be
-    shorter or more concise. I'm more worried about not having captured the full complexity of the question.
-
-    First give a numbered list of at least five improvements. Then incorporate those improvements 
-    into the existing draft answer. Keep the style of the draft answer. 
-
+    
+    Please review my answer and suggest improvements. I do NOT want a shorter answer; I want full coverage of the user’s question and concerns.
+    
+    First, give a numbered list of at least five improvements. Then produce a full, self-contained revised answer that a user could send as-is (not a diff). Keep the original structure where possible (intro → code → explanation → outro), and keep the original voice/tone.
+    
     You MUST use the following output format:
-
+    
     ### Improvements
     1. Improvement 1
     2. Improvement 2
     3. Improvement 3
     4. Improvement 4
     5. Improvement 5
-
+    
     ### Revised Answer
-    Revised answer here.
-
+    (Output the ENTIRE revised message here — including any intro text, code blocks, explanations immediately after each code block, and any closing remarks. Do NOT output only changed lines, a diff, or a snippet. No ellipses. Preserve any prose that was in the draft unless removing redundancy; if you remove something, justify it in Comments. Include at least one paragraph BEFORE the first code block and at least one AFTER the last code block, unless the draft lacked them. Keep code fences with language tags, e.g., ```python. The revised answer must not be shorter overall than the draft. Explanations intended for the user belong here, not in Comments.)
+    
     ### Comments
-    Comments from you on the changes.
-
-    Your answer MUST consist of these three headings and their content below them.
-    *** Very important ***
-    1. The content under the heading Revised Answer MUST only contain the contents of the revised answer so, that I
-       can copy-paste it.
-    2. ALWAYS give detailed explanations after code snippets
+    (Explain what you changed and why — meta commentary only. Do NOT move explanations meant for the user here.)
+    
+    Hard constraints:
+    - In “Revised Answer”, print the full message (intro + code (if any) + explanations + closing), not just changed lines.
+    - Keep the style and tone of the draft; expand coverage and clarity without compressing content.
+    - Do not omit surrounding prose if the draft had it; mirror the draft’s structure unless an improvement requires reorganization (justify in Comments).
     """
