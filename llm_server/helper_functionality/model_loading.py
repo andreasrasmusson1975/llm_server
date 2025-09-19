@@ -42,7 +42,7 @@ def initialize(
         model_id,
         #quantization_config=bnb,
         device_map=device,
-        attn_implementation="flash_attention_2",
+        attn_implementation="sdpa",
         dtype=torch.bfloat16,
     )
     model = torch.compile(model)
