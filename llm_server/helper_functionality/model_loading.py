@@ -37,12 +37,12 @@ def initialize(
             - The quantized, compiled language model ready for inference on GPU.
     """
     tok = AutoTokenizer.from_pretrained(model_id, use_fast=True)
-    bnb = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16)
+    #bnb = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16)
     model = AutoModelForCausalLM.from_pretrained(
         model_id,
-        quantization_config=bnb,
+        #quantization_config=bnb,
         device_map=device,
-        attn_implementation="sdpa",
+        attn_implementation="flash_attention_2",
         dtype=torch.bfloat16,
     )
     model = torch.compile(model)
