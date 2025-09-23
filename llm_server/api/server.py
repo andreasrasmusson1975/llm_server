@@ -235,7 +235,7 @@ async def chat_blocking(request: Request, auth=Depends(check_api_key)):
     """
     data = await request.json()
     user_message = data["prompt"]
-    history = data.get("history", [])
+    history = data.get("history") or []
     improvement = data.get("improvement", False)
     intermediate_steps = data.get("intermediate_steps", False)
 
@@ -344,7 +344,7 @@ async def chat_stream(request: Request, auth=Depends(check_api_key)):
     """
     data = await request.json()
     user_message = data["prompt"]
-    history = data.get("history", [])
+    history = data.get("history") or []
     improvement = data.get("improvement", False)
     intermediate_steps = data.get("intermediate_steps", False)
 
