@@ -1,0 +1,3 @@
+azure:
+  key_vault_url: "KEYVAULT_URL"
+  api_key_secret_name: "API_KEY_SECRET_NAME"

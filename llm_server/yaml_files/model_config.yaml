@@ -1,0 +1,11 @@
+model:
+  type: "llm"
+  id: "meta-llama/Llama-3.1-8B-Instruct"
+  device: "auto"
+  parameters:
+    max_new_tokens: 4096
+    temperature: 0.7
+    top_p: 0.9
+    do_sample: True
+    use_cache: True
+    return_dict_in_generate: True
